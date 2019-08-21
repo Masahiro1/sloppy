@@ -20,7 +20,7 @@ test:
 production:
  <<: *default
  database: sloppy_production
- username: sloppy
+ username: admin
  password: <%= ENV['SLOPPY_DATABASE_PASSWORD'] %>
  host: <%= ENV['SLOPPY_DATABASE_HOST'] %>
  port: 3306
