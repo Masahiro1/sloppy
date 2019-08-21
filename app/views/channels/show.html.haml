@@ -1,0 +1,14 @@
+.wrap
+
+  = @user.name
+  = @channel.name
+  = @workspace.name
+
+  %br
+
+  - @workspaces.each do |w|
+    = w.name
+    %br
+    - w.channels.each do |c|
+      = link_to c.name, channels_show_path(channel_id: c.id)
+    %br
