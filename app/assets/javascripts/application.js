@@ -17,3 +17,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require_tree .
+
+// 「require_tree .」は全部のファイルを読み込んでしまうのでやらない
+// cable -> channelの順番で
+//= require cable
+//= require_tree ./channels
