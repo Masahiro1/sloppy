@@ -4,7 +4,7 @@ default: &default
  charset: utf8mb4
  collation: utf8mb4_unicode_ci
  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
- username: sloppy
+ username: root
  password:
  # socket: /var/lib/mysql/mysql.sock
  # socket: /var/run/mysqld/mysqld.sock # ubuntu用
