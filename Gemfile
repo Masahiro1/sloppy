@@ -218,7 +218,7 @@ group :test do
 end
 
 # group :production, :staging do
-#   gem 'unicorn'
+  gem 'unicorn'
 #   gem 'capistrano',          require: false
 #   gem 'capistrano-rails',    require: false
 #   gem 'capistrano-rbenv',    require: false
