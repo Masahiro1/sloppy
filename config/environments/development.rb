@@ -58,4 +58,37 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+
+
+
+
+  # 以下追加 -----------------------------------------------------
+  # better_errorが動くように
+  BetterErrors::Middleware.allow_ip! "0.0.0.0/0"
+
+  # controller や model の変更がサーバーリロードなしで反映される
+  # 参考：https://qiita.com/kamayla/items/6b97034b105a05dd6a58
+  config.cache_classes = false
+  # config.reload_classes_only_on_change = false # Action Cableを使う時にWebsocketの接続が何度も切れるようになるのでコメントアウト
+
+  # bullet設定
+  config.after_initialize do
+      Bullet.enable = true # Bulletプラグインを有効
+      Bullet.alert = true # JavaScriptでの通知
+      Bullet.bullet_logger = true # log/bullet.logへの出力
+      Bullet.console = true # ブラウザのコンソールログに記録
+      Bullet.rails_logger = true # Railsログに出力
+      Bullet.unused_eager_loading_enable = false # 不要なJOINがあってもdetectしないようにする
+
+  end
+
+  # メールをletter_openerで見る
+  config.action_mailer.delivery_method = :letter_opener
+  config.action_mailer.perform_deliveries = true
+
+  # Action cableのこのエラーを防ぐ（コンソールに出る）
+  # 「Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255」
+  # 参考：https://qiita.com/pugiemonn/items/f7956ba61012ca9fc16c
+  config.web_console.whitelisted_ips = '10.0.2.2'
+  # -------------------------------------------------------------
 end

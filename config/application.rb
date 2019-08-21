@@ -29,5 +29,23 @@ module Sloppy
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # 以下追加 --------------------------------------------
+
+    # rails g controller ～でhelperやsassが作られない様に
+    config.generators do |g|
+        # g.assets false # g chennel で jsが作られなくなるのでコメントアウト
+        g.helper false
+        g.test_framework false
+    end
+
+    # 日本語化
+    config.i18n.default_locale = :ja
+    config.time_zone = 'Asia/Tokyo'
+
+    # formでエラーが出た時<div class="field_with_error">で囲まれないようにする
+    config.action_view.field_error_proc = Proc.new do |html_tag, instance|
+        %Q(#{html_tag}).html_safe
+    end
   end
 end
