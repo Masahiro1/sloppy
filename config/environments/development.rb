@@ -90,5 +90,8 @@ Rails.application.configure do
   # 「Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255」
   # 参考：https://qiita.com/pugiemonn/items/f7956ba61012ca9fc16c
   config.web_console.whitelisted_ips = '10.0.2.2'
+
+  # devise 用
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # -------------------------------------------------------------
 end
