@@ -57,9 +57,4 @@ ActiveRecord::Schema.define(version: 2019_08_21_004054) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "channels", "workspaces"
-  add_foreign_key "user_channels", "channels"
-  add_foreign_key "user_channels", "users"
-  add_foreign_key "user_workspaces", "users"
-  add_foreign_key "user_workspaces", "workspaces"
 end
