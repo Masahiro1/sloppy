@@ -1,10 +1,12 @@
 class ChannelsController < ApplicationController
-  before_action :authenticate_user!
+  # before_action :authenticate_user!
 
   def home; end
 
   def show
-    @user = current_user
+    # @user = current_user
+    @user = User.first
+
     @workspaces = @user.workspaces.includes(:channels).order(created_at: :asc)
 
     id = params[:channel_id]
