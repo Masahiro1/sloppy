@@ -1,5 +1,7 @@
 .wrap
 
+  .display-none.info{data: {"user-id": @user.id, "channel-id": @channel.id}}
+
   = @user.name
   = @channel.name
   = @workspace.name
@@ -12,3 +14,15 @@
     - w.channels.each do |c|
       = link_to c.name, channels_show_path(channel_id: c.id)
     %br
+
+  %br
+
+  .messages
+    = render @messages
+    -# - @messages.each do |m|
+    -#
+    -#   %br
+
+%form
+  %label Say something
+  %input{type: "text", data: {behavior: "room_speaker"}}

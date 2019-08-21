@@ -16,5 +16,7 @@ class ChannelsController < ApplicationController
 
     @workspace = @channel.workspace
     @channels  = @workspace.channels.order(created_at: :asc)
+
+    @messages = @channel.messages.includes(:user)
   end
 end

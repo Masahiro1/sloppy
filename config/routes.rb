@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     get 'show'
   end
 
+  mount ActionCable.server => '/cable'
+
   root 'channels#home'
 end

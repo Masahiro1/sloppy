@@ -14,8 +14,6 @@
 //= require jquery
 //= require nested_form_fields
 
-//= require rails-ujs
-//= require activestorage
 //= require_tree .
 
 // 「require_tree .」は全部のファイルを読み込んでしまうのでやらない
