@@ -1,0 +1,123 @@
+
+$SetSizeList: 0,4,6,8,12,16,20,24,32,40,48,56,64,72,80
+
+// padding
+
+@each $size in $SetSizeList
+  .p#{$size}
+    padding: $size + px
+
+  .pt#{$size}
+    padding-top: $size + px
+
+  .pr#{$size}
+    padding-right: $size + px
+
+  .pb#{$size}
+    padding-bottom: $size + px
+
+  .pl#{$size}
+    padding-left: $size + px
+
+  .px#{$size}
+    padding-left: $size + px
+    padding-right: $size + px
+
+  .py#{$size}
+    padding-top: $size + px
+    padding-bottom: $size + px
+
+// margin
+
+@each $size in $SetSizeList
+  .m#{$size}
+    margin: $size + px
+
+  .mt#{$size}
+    margin-top: $size + px
+
+  .mr#{$size}
+    margin-right: $size + px
+
+  .mb#{$size}
+    margin-bottom: $size + px
+
+  .ml#{$size}
+    margin-left: $size + px
+
+  .mx#{$size}
+    margin-left: $size + px
+    margin-right: $size + px
+
+  .my#{$size}
+    margin-top: $size + px
+    margin-bottom: $size + px
+
+// fontsize
+
+$SetSizeList: 10,12,14,16,18,20,22,24,26,28,30,32
+
+@each $size in $SetSizeList
+  .fs#{$size}
+    font-size: $size + px
+
+// min-height width
+
+$SetSizeList: 16 32 64 128 256 512
+
+@each $size in $SetSizeList
+  .mw#{$size}
+    min-width: $size + px
+
+  .mh#{$size}
+    min-height: $size + px
+
+// Other
+.text-align-right
+  text-align: right
+
+.text-align-left
+  text-align: left
+
+.text-align-center
+  text-align: center
+
+.display-block
+  display: block
+
+.display-inline
+  display: inline
+
+.display-inline-block
+  display: inline-block
+
+.display-none
+  display: none
+
+.float-left
+  float: left
+
+.float-right
+  float: right
+
+.vertical-align-sub
+  vertical-align: sub
+
+.vertical-align-text-top
+  vertical-align: text-top
+
+.opacity5
+  opacity: .5
+
+.w100
+  width: 100%
+
+.h100
+  height: 100%
+
+.cursor-pointer
+  cursor: pointer
+
+.hover-text-decoration-none
+  &:hover
+    text-decoration: none

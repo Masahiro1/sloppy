@@ -1,0 +1,83 @@
+// 一番上にfont-family追加した
+// 他は「以下追加」の下
+
+/* http://meyerweb.com/eric/tools/css/reset/
+ * v2.0 | 20110126
+ * License: none (public domain)
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+  // font-family: "Hiragino Sans", "Helvetica Neue", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "Meiryo", "メイリオ", "Osaka", "MS PGothic", "TBUDGothic", arial, helvetica, sans-serif
+  // Googleの
+  font-family: Roboto, HelveticaNeue, arial, sans-serif
+
+/* HTML5 display-role reset for older browsers
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+// 以下追加
+
+a
+  text-decoration: none
+  cursor: pointer
+  color: inherit
+
+label, input[type=date], input[type=datetime-local], input[type=radio], input[type=submit], button
+  cursor: pointer
+
+select  
+  cursor: pointer
+  background-color: white
+  box-sizing: inherit
+
+body
+  word-wrap: break-word
+  word-break: break-all
+
+table
+  table-layout: fixed
+
+// ios button / submit
+
+input[type=submit],
+input[type=button]
+  border-radius: 0
+  -webkit-box-sizing: content-box
+  -webkit-appearance: button
+  appearance: button
+  border: none
+  box-sizing: border-box
+  &:-webkit-search-decoration
+    display: none
+  &:focus
+    outline-offset: -2px
