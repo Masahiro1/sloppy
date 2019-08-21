@@ -1,24 +1,28 @@
-# README
+## バージョン
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails: 5.2.3
 
-Things you may want to cover:
+Ruby: 2.5.1
 
-* Ruby version
+## データベース
 
-* System dependencies
+MySQL
 
-* Configuration
+## セットアップ
 
-* Database creation
+- database.ymlはレポジトリに上がっています。
+- master.keyは別途共有で
 
-* Database initialization
+```bash
+bundle exec rails db:migrate
 
-* How to run the test suite
+# bundle exec rails db:seed
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+## ダミーデータ生成
 
-* Deployment instructions
+```bash
 
-* ...
+```
+
+## DNS購入日
