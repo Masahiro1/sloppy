@@ -2,10 +2,17 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+
+    %meta{name: "viewport", content: "initial-scale=1.0,width=device-width"}
+    -  if request.smart_phone?
+      = stylesheet_link_tag 'sp/application', media: 'all'
+    - else
+      = stylesheet_link_tag 'pc/application', media: 'all'
+
+
     %title Sloppy
     = csrf_meta_tags
     = csp_meta_tag
-    = stylesheet_link_tag    'application', media: 'all'
     = javascript_include_tag 'application'
   %body
     = yield
