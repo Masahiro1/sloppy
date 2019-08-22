@@ -108,6 +108,8 @@ Rails.application.configure do
     /http:\/\/elb-sloppy-2022869572.ap-northeast-1.elb.amazonaws.com.*/,
   ]
 
+  config.action_cable.url = "ws://http://elb-sloppy-2022869572.ap-northeast-1.elb.amazonaws.com/cable/"
+
   # REDIS
   ENV["REDIS"] = "localhost:6379"
 end
