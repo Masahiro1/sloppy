@@ -26,15 +26,15 @@
         .head_left
           = "# #{@channel.name}"
         .head_right
-          = image_tag "info.png", class: "head_right_img"
-          = image_tag "setting.png", class: "head_right_img"
-          .head_right_search
-            = image_tag "search.png", class: "img"
-            .text
-              検索
-          = image_tag "atmark.png", class: "head_right_img"
-          = image_tag "star.png", class: "head_right_img"
-          = image_tag "threedot.png", class: "head_right_img"
+          -# = image_tag "info.png", class: "head_right_img"
+          -# = image_tag "setting.png", class: "head_right_img"
+          -# .head_right_search
+          -#   = image_tag "search.png", class: "img"
+          -#   .text
+          -#     検索
+          -# = image_tag "atmark.png", class: "head_right_img"
+          -# = image_tag "star.png", class: "head_right_img"
+          -# = image_tag "threedot.png", class: "head_right_img"
       .messages
         = render @messages
 
