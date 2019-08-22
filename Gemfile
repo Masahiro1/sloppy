@@ -85,8 +85,8 @@ gem 'acts-as-taggable-on', '~> 6.0'
 # gem 'sitemap_generator'
 
 # redis
-# gem 'redis'
-# gem 'redis-rails'
+gem 'redis'
+gem 'redis-rails'
 
 # bulk insert用
 gem 'activerecord-import'
