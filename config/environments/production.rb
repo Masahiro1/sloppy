@@ -93,4 +93,18 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  #　以下追記
+  config.public_file_server.enabled = true
+
+  # websocket用
+  config.action_cable.allowed_request_origins = [
+    'https://52.199.170.115',
+    /https:\/\/52.199.170.115.*/,
+    'https://question-and-talking.com',
+    /https:\/\/question-and-talking.com.*/,
+  ]
+
+  # REDIS
+  ENV["REDIS"] = "localhost:6379"
 end
