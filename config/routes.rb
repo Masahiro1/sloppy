@@ -9,5 +9,5 @@ Rails.application.routes.draw do
 
   mount ActionCable.server => '/cable'
 
-  root 'channels#home'
+  root 'channels#show'
 end
