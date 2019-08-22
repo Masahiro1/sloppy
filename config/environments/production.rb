@@ -101,7 +101,6 @@ Rails.application.configure do
   config.action_cable.allowed_request_origins = [
     'http://52.192.210.151',
     /http:\/\/52.192.210.151.*/,
-    /http:\/\/.*/,
     # 'https://question-and-talking.com',
     # /https:\/\/question-and-talking.com.*/,
 
@@ -109,7 +108,7 @@ Rails.application.configure do
     # /http:\/\/elb-sloppy-2022869572.ap-northeast-1.elb.amazonaws.com.*/,
   ]
 
-  config.action_cable.url = "ws://52.192.210.151/cable/"
+  # config.action_cable.url = "ws://52.192.210.151/cable/"
 
   # REDIS
   ENV["REDIS"] = "localhost:6379"
