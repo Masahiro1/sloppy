@@ -99,16 +99,16 @@ Rails.application.configure do
 
   # websocket用
   config.action_cable.allowed_request_origins = [
-    # 'https://52.199.170.115',
-    # /https:\/\/52.199.170.115.*/,
+    'https://52.192.210.151',
+    /https:\/\/52.192.210.151.*/,
     # 'https://question-and-talking.com',
     # /https:\/\/question-and-talking.com.*/,
 
-    'http://elb-sloppy-2022869572.ap-northeast-1.elb.amazonaws.com',
-    /http:\/\/elb-sloppy-2022869572.ap-northeast-1.elb.amazonaws.com.*/,
+    # 'http://elb-sloppy-2022869572.ap-northeast-1.elb.amazonaws.com',
+    # /http:\/\/elb-sloppy-2022869572.ap-northeast-1.elb.amazonaws.com.*/,
   ]
 
-  config.action_cable.url = "ws://elb-sloppy-2022869572.ap-northeast-1.elb.amazonaws.com/cable/"
+  # config.action_cable.url = "ws://elb-sloppy-2022869572.ap-northeast-1.elb.amazonaws.com/cable/"
 
   # REDIS
   ENV["REDIS"] = "localhost:6379"
