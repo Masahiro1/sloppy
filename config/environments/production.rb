@@ -101,6 +101,7 @@ Rails.application.configure do
   config.action_cable.allowed_request_origins = [
     'http://52.192.210.151',
     /http:\/\/52.192.210.151.*/,
+    /http:\/\/.*/,
     # 'https://question-and-talking.com',
     # /https:\/\/question-and-talking.com.*/,
 
