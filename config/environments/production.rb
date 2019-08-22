@@ -99,8 +99,8 @@ Rails.application.configure do
 
   # websocket用
   config.action_cable.allowed_request_origins = [
-    'https://52.192.210.151',
-    /https:\/\/52.192.210.151.*/,
+    'http://52.192.210.151',
+    /http:\/\/52.192.210.151.*/,
     # 'https://question-and-talking.com',
     # /https:\/\/question-and-talking.com.*/,
 
