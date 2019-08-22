@@ -9,9 +9,12 @@ class ChannelsController < ApplicationController
 
     @workspaces = @user.workspaces.includes(:channels).order(created_at: :asc)
 
-    id = params[:channel_id]
-    if id.present?
-      @channel = Channel.find(id)
+    channel_id = params[:channel_id]
+    workspace_id = params[:workspace_id]
+    if channel_id.present?
+      @channel = Channel.find(channel_id)
+    elsif workspace_id.present?
+      @channel = Workspace.find(workspace_id).channels.first
     else
       @channel = @workspaces.first.channels.first
     end

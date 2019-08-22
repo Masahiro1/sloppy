@@ -2,27 +2,44 @@
 
   .display-none.info{data: {"user-id": @user.id, "channel-id": @channel.id}}
 
-  = @user.name
-  = @channel.name
-  = @workspace.name
+  .show
+    .sidebar1
+      .background-white
+        - @workspaces.each do |w|
+          = link_to w.name, channels_show_path(workspace_id: w.id),
+            class: "item #{'item--active' if w.id == @workspace.id}"
+    .sidebar2
+      .workspace-name
+        = @workspace.name
+      .user-name
+        = @user.name
 
-  %br
+      .link-title
+        チャンネル
 
-  - @workspaces.each do |w|
-    = w.name
-    %br
-    - w.channels.each do |c|
-      = link_to c.name, channels_show_path(channel_id: c.id)
-    %br
+      .background-white
+        - @channels.each do |c|
+          = link_to "# #{c.name}", channels_show_path(channel_id: c.id),
+            class: "item #{'item--active' if c.id == @channel.id}"
+    .main
+      .head
+        .head_left
+          = "# #{@channel.name}"
+        .head_right
+          = image_tag "info.png", class: "head_right_img"
+          = image_tag "setting.png", class: "head_right_img"
+          .head_right_search
+            = image_tag "search.png", class: "img"
+            .text
+              検索
+          = image_tag "atmark.png", class: "head_right_img"
+          = image_tag "star.png", class: "head_right_img"
+          = image_tag "threedot.png", class: "head_right_img"
+      .messages
+        = render @messages
 
-  %br
-
-  .messages
-    = render @messages
-    -# - @messages.each do |m|
-    -#
-    -#   %br
-
-%form
-  %label Say something
-  %input{type: "text", data: {behavior: "room_speaker"}}
+      .form
+        .form_inner
+          %input{type: "text", data: {behavior: "room_speaker"}, class: "input"}
+          %btn.submit-btn
+            送信

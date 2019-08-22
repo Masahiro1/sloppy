@@ -9,17 +9,17 @@ Message.all.destroy_all
   user = User.create!(
     email: "user#{i}@example.com",
     password: "password",
-    name: "user#{i}",
+    name: "ユーザー#{i}",
   )
 
   workspace = user.workspaces.build(
-    name: "workspace#{i}"
+    name: "ワークスペース#{i}"
   )
   workspace.save!
 
   10.times do |j|
     channel = workspace.channels.build(
-      name: "channel#{i}_#{j}"
+      name: "チャンネル#{i}_#{j}"
     )
     channel.save!
   end
@@ -46,14 +46,15 @@ puts "finish connect users and workspaces, channels"
 
 channels = Channel.order(created_at: :asc)
 users    = User.order(created_at: :asc)
-channels.each do |c|
-  users.all.each do |u|
-    Message.create!(
-      user_id: u.id,
-      channel_id: c.id,
-      content: "My name is #{u.name}. I'm speaking in channel #{c.name}."
-    )
-  end
+channels.each_with_index do |c, i|
+  # users.all.each do |u|
+  u = users[i % 10]
+  Message.create!(
+    user_id: u.id,
+    channel_id: c.id,
+    content: "#{u.name}です。#{c.name}にメッセージを送信しました。"
+  )
+  # end
 end
 
 puts "finish create messages"

@@ -1,3 +1,8 @@
-= message.user.name
-= message.content
-%br
+.message-item
+  .item-info
+    .item-name
+      = message.user.name
+    .item-time
+      = message.created_at.strftime("%R")
+  .item-content
+    = message.content
