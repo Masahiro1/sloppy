@@ -1,3 +1,6 @@
+## GithubレポジトリURL
+https://github.com/Masahiro1/survey
+
 ## バージョン
 
 Rails: 5.2.3
@@ -26,6 +29,3 @@ bundle exec rails db:migrate
 ```
 
 ## DNS購入日
-
-## GithubレポジトリURL
-https://github.com/Masahiro1/survey
