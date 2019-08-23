@@ -1,5 +1,5 @@
 ## GithubレポジトリURL
-https://github.com/Masahiro1/survey
+https://github.com/Masahiro1/sloppy
 
 ## バージョン
 
