@@ -26,3 +26,6 @@ bundle exec rails db:migrate
 ```
 
 ## DNS購入日
+
+## GithubレポジトリURL
+https://github.com/Masahiro1/survey
