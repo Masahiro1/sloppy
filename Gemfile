@@ -8,7 +8,7 @@ end
 # 基本ツール
 gem 'rails', '~> 5.2.3'
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
-gem 'puma', '~> 3.11'
+gem 'puma', '~> 4.3'
 gem 'sassc-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
